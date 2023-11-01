@@ -19,7 +19,7 @@ export default function Login() {
 
       setLoading(true);
   
-      /* const log = await fetch(`http://localhost:9000/api/login`, {
+      const log = await fetch(`http://localhost:9000/api/login`, {
         method: "POST",
         mode:"cors",
         headers: {
@@ -52,7 +52,7 @@ export default function Login() {
         
         const errorData = await response.json();
         console.error('Login failed:', errorData.message);
-      } */
+      }
 
       
     } catch (error) {

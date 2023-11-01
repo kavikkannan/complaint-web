@@ -16,7 +16,7 @@ export default function reg() {
 
       setLoading(true);
       
-      /* const response = await fetch(`http://localhost:9000/api/register`, {
+      const response = await fetch(`http://localhost:9000/api/register`, {
         method: "POST",
         mode:"cors",
         headers: {
@@ -35,7 +35,7 @@ export default function reg() {
         router.push("/signin");
       } else {
         alert('not success');
-      } */
+      }
     } catch (error) {
       console.error(error);
     } finally {
