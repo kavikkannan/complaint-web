@@ -1,6 +1,6 @@
 "use client";
 import {  useState } from 'react';
-
+import Image from 'next/image';
 import Link from 'next/link';
 
 
@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="text-black sr-only">Your Company</span>
-            <img className=" h-8 w-auto"
+            <Image className=" h-8 w-auto"
                 src=""
                 alt="your company"
             />

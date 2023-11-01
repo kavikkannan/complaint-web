@@ -17,6 +17,7 @@ const callsToAction = [
   { name: 'Contact manager', href: '#', icon: PhoneIcon },
 ];
 import Link from 'next/link';
+import Image from 'next/image';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
@@ -44,7 +45,7 @@ export default function Header() {
         <div className="  relative flex lg:flex">
           <Link href="/home_employe" className="-m-1.5 p-1.5">
             <span className="text-black sr-only">Your Company</span>
-            <img className=" h-8 w-auto"
+            <Image className=" h-8 w-auto"
                 src="logo.png"
                 alt="your company"
             />
@@ -133,7 +134,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link href="/home_employe" className="-m-1.5 p-1.5">
               <span className="text-black sr-only">Your Company</span>
-              <img
+              <Image
                 className=" h-8 w-auto"
                 src=""
                 alt="your company"
