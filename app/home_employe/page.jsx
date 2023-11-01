@@ -1,9 +1,10 @@
-import Body from "@/components/BodyE"
+import Kk from "@/components/BodyE"
+import Ii from "@/components/HeaderE";
 export default function Home_manager() {
   return (
     <div> 
-
-        <Body/>
+        <Kk/>
+        <Ii/>
         </div>
   );
 }
