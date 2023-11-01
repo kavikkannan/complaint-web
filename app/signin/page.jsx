@@ -1,9 +1,9 @@
-"use client";
-import Reg from '@/components/Reg';
+
+import Login from '@/components/Login';
 export default function login() {
     return (
       <div >
-        <Reg/>
+        <Login/>
       </div>
     )
   }
