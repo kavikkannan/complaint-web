@@ -2,7 +2,7 @@ import React from 'react'
 import CreateT from '@/components/Create_task'
 
 
-const page = () => {
+export default function page () {
   return (
     <div>
     <div className=" h-screen bg-gray-300">
@@ -12,7 +12,6 @@ const page = () => {
   </div>
    
     
-  )
+  );
 }
 
-export default page

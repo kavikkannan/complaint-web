@@ -5,6 +5,6 @@ export default function login() {
       <div >
         <Login/>
       </div>
-    )
+    );
   }
   
