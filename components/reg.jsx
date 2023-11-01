@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Header_LPage from '@/components/Loading';
 
-export default function login() {
+export default function reg() {
   const [loading, setLoading] = useState(false);
   const [position, setPosition] = useState('');
   const [email, setEmail] = useState('');
@@ -170,5 +170,5 @@ export default function login() {
       )}
         </>
     );
-  }
+  };
   

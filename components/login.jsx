@@ -4,7 +4,7 @@ import Link from "next/link"
 import React, { useState } from "react"; 
 import Loading from '@/components/Loading';
 import { Result } from "postcss";
-export default function loginM() {
+export default function Login() {
   const [loading, setLoading] = useState(false);
   const router=useRouter();
   const [email, setEmail] = useState('');
@@ -156,4 +156,4 @@ export default function loginM() {
         )}
         </>
     );
-      }
+      };
