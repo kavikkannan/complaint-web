@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import React, { useState } from "react";
-import Header_LPage from '@/components/loading';
+import Header_LPage from '@/components/Loading';
 
 export default function login() {
   const [loading, setLoading] = useState(false);

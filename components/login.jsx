@@ -2,7 +2,7 @@
 import {useRouter} from "next/navigation"
 import Link from "next/link"
 import React, { useState } from "react"; 
-import Loading from '@/components/loading';
+import Loading from '@/components/Loading';
 import { Result } from "postcss";
 export default function loginM() {
   const [loading, setLoading] = useState(false);

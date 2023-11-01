@@ -1,5 +1,5 @@
-import Body from "@/components/bodyE"
-import Header from "@/components/headerE";
+import Body from "@/components/BodyE"
+import Header from "@/components/HeaderE";
 export default function Home_manager() {
   return (
     <div> 

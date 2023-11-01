@@ -1,5 +1,5 @@
 import React from 'react'
-import CreateT from '@/components/create_task'
+import CreateT from '@/components/Create_task'
 
 
 const page = () => {
