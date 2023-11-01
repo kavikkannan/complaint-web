@@ -10,7 +10,7 @@ import {
 import { ChevronDownIcon, PhoneIcon } from '@heroicons/react/20/solid';
 import { useRouter } from 'next/navigation';
 const products = [
-  { name: 'profile', description: 'Get a better understanding of your traffic',href: '/profile', icon: ChartPieIcon },
+  { name: 'profile', description: 'Get a better understanding of your traffic',href: '#', icon: ChartPieIcon },
   { name: 'about', description: 'Wanna know about us?', href: '#', icon: CursorArrowRaysIcon },
  ];
 const callsToAction = [
@@ -34,7 +34,7 @@ export default function Header() {
         <div className="  relative flex lg:flex">
           <Link href="/home_employe" className="-m-1.5 p-1.5">
             <span className="text-black sr-only">Your Company</span>
-            <Image className=" h-8 w-auto"
+            <img className=" h-8 w-auto"
                 src=""
                 alt="your company"
             />
@@ -112,7 +112,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link href="/home_employe" className="-m-1.5 p-1.5">
               <span className="text-black sr-only">Your Company</span>
-              <Image
+              <img
                 className=" h-8 w-auto"
                 src=""
                 alt="your company"

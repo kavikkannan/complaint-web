@@ -45,7 +45,7 @@ export default function Header() {
         <div className="  relative flex lg:flex">
           <Link href="/home_employe" className="-m-1.5 p-1.5">
             <span className="text-black sr-only">Your Company</span>
-            <Image className=" h-8 w-auto"
+            <img className=" h-8 w-auto"
                 src="logo.png"
                 alt="your company"
             />
@@ -134,7 +134,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link href="/home_employe" className="-m-1.5 p-1.5">
               <span className="text-black sr-only">Your Company</span>
-              <Image
+              <img
                 className=" h-8 w-auto"
                 src=""
                 alt="your company"
