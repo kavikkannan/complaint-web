@@ -1,5 +1,5 @@
 'use client'
-import React, {Fragment, useState } from 'react';
+import React, {useEffect,Fragment, useState } from 'react';
 import { Listbox, Transition } from "@headlessui/react";
 import { ChevronUpDownIcon,CheckIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -27,10 +27,12 @@ const Grievances_types = [
 ]
 
 function YourComponent() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState('');
-  const [taskName, setTaskName] = useState("");
-  const [deadline, setDeadline] = useState("");
+  const [description, setTaskName] = useState("");
+  const [email, setEmail] = useState("");
+  const status = 'on-going';
+  const [date, setDeadline] = useState("");
 
   const openForm = () => {
     setIsOpen(true);
@@ -39,23 +41,45 @@ function YourComponent() {
   const closeForm = () => {
     setIsOpen(false);
   };
-
+  useEffect(() => {
+  const fetchemail = async() =>{
+    const Em = await fetch(`http://localhost:9000/api/user`,{
+      method : "GET",
+      mode : "cors",
+      headers:{
+        "Content-Type":"application/json",
+      },
+      credentials:"include",
+    })
+    const result= await Em.json();
+    setEmail(result.email);
+  }
+  fetchemail();
+}, []); 
   const handleSubmit = async() => {
     try{
-      const log = await fetch(`http://localhost:9000/api/login`, {
+     const g_type =selected.name;
+     console.log(g_type);
+      const log = await fetch(`http://localhost:8000/grievances/`, {
         method: "POST",
         mode:"cors",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "pkglication/json",
         },
         body: JSON.stringify({
           email,
-          password,
+          g_type,
+          description,
+          status,
+          date,
         }),
-        credentials: 'include',
+        
       })
+      if(log.ok){
+        closeForm();
+      }
 
-      closeForm();
+      
     }catch{
 
     }
@@ -88,7 +112,7 @@ function YourComponent() {
               Close
             </button>
           </div>
-          <form onSubmit={handleSubmit} className="p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
+          <form  className="p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
           <div className=''>
           <Listbox value={selected} onChange={setSelected}>
       {({ open }) => (
@@ -161,7 +185,7 @@ function YourComponent() {
               <input
                 type="text"
                 placeholder="Enter The problem(200 Words)"
-                value={taskName}
+                value={description}
                 onChange={(e) => setTaskName(e.target.value)}
                 className="w-full p-2 border rounded-md text-black"
                 required
@@ -170,14 +194,14 @@ function YourComponent() {
             <div className="mb-4">
               <input
                 type="date"
-                value={deadline}
+                value={date}
                 onChange={(e) => setDeadline(e.target.value)}
                 className="w-full p-3 border rounded-md text-black"
                 required
               />
             </div>
             <div className="text-right">
-              <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">
+              <button type="button" onClick={handleSubmit} className="bg-blue-500 text-white px-4 py-2 rounded-md">
                 Submit
               </button>
             </div>

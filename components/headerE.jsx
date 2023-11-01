@@ -93,7 +93,7 @@ export default function Header() {
                 </div>
       
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="/" className="bg-black flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-green-200 hover:bg-green-400">
+          <Link href="/" className="bg-gray-200 flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-black hover:bg-green-400">
             Log out 
             <span aria-hidden="true">&rarr;</span>
           </Link>
