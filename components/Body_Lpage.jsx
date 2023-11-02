@@ -7,7 +7,7 @@ export default function Body_Lpage() {
       <div className="container mx-auto px-4">
         <h1 className="text-3xl text-green-200 font-bold mb-4">Welcome to Our Grievance Redressal System</h1>
         <p className="text-lg text-white mb-8">
-          At KB'association, we are dedicated to addressing your concerns and ensuring a harmonious environment for everyone. Our Grievance Redressal System provides a secure and confidential platform for you to raise grievances, report issues, and seek resolutions.
+          At KB association, we are dedicated to addressing your concerns and ensuring a harmonious environment for everyone. Our Grievance Redressal System provides a secure and confidential platform for you to raise grievances, report issues, and seek resolutions.
         </p>
 
         <div className="bg-green-200 shadow-md rounded-lg overflow-hidden">
@@ -63,7 +63,7 @@ export default function Body_Lpage() {
         </div>
 
         <p className="text-white mt-8">
-          Thank you for choosing KB'association for your grievance redressal needs. Together, let&apos;s build a respectful and supportive community.
+          Thank you for choosing KB association for your grievance redressal needs. Together, let&apos;s build a respectful and supportive community.
         </p>
       </div>
     </div>
