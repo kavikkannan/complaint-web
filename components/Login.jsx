@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import {useRouter} from "next/navigation"
 import Link from "next/link"
 import React, { useState } from "react"; 
