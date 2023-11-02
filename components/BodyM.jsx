@@ -25,7 +25,7 @@ const Grievances_types = [
         },
   
 ]
-export default function bodyM() {
+export default function BodyM() {
   const [data, setData] = useState([]);
   const [selected, setSelected] = useState('');
   const [det, setDet] = useState([]);
