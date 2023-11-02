@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from "react";
 
-export default function bodyM() {
+export default function BodyE() {
   const [data, setData] = useState([]); // Change to an array to hold multiple records
   const [det, setDet] = useState([]);
 
